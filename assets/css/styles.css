@@ -8,7 +8,7 @@
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
   --first-color: hsl(0, 0%, 87%);
-  --first-color-dark: hsl(0, 0%, 0%);
+  --first-color-dark: hsl(0, 1%, 83%);
   --first-color-darken: hsl(0, 92%, 20%);
   --second-color: hsl(0, 100%, 36%);
   --second-color-dark: hsl(0, 100%, 20%);
@@ -431,14 +431,15 @@ margin-top: 3rem;
 .contact__container{
   position: relative;
   background-color: var(--first-color-dark);
-  padding-top: 3.5rem;
+  padding-top: .5rem;
   border-radius: 3rem;
   box-shadow: inset var(--shadow-card);
   overflow: hidden;
 }
 
 .contact__content{
-  padding-top: 1rem;
+  padding-top: 5rem;
+  align-items: center;
   row-gap: 3rem;
 }
 
@@ -451,14 +452,16 @@ margin-top: 3rem;
   margin-bottom: .5rem;
 }
 .contact__social{
+  color: red;
   display: flex;
   justify-content: center;
-  column-gap: .75rem;
+  column-gap: 1.75rem;
 }
 
 .contact__social a{
   columns: var(--second-color);
   font-size: 2rem;
+  color: var(--second-color);
 }
 .contact__info{
   font-style: normal;
@@ -543,13 +546,17 @@ margin-top: 3rem;
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
-@media screen and (max-width: 340px){
+@media screen and (max-width: 540px){
   .container{
     margin-inline: 1rem;
   }
 
   .section__title{
-    font-size: var(--h2-font-size);
+    font-size: var(--h2-font-size)=;
+  }
+
+  .home__data{
+    margin-top: 5rem;
   }
 
   .home__title{
@@ -594,7 +601,9 @@ margin-top: 3rem;
     grid-template-columns: 370px;
     justify-content: center;
   }
-
+  .home__data{
+    margin-top: 3rem;
+  }
   .favorites__swiper{
     max-width: 600px;
     overflow-x: clip;
@@ -618,8 +627,12 @@ margin-top: 3rem;
     grid-template-columns: repeat(3, 160px);
   }
 
-  .contact{
+ /*  .contact{
     grid-template-columns: 550px;
+  } */
+
+  .home__data{
+    margin-top: 3rem;
   }
 
   .footer__content{
@@ -770,7 +783,7 @@ margin-top: 3rem;
 }
 
 .contact__data{
-  text-align: initial;
+  text-align: center;
   grid-template: max-content / repeat(2, max-content);
   gap: 3rem 2rem;
 }
@@ -779,7 +792,11 @@ margin-top: 3rem;
   margin-bottom: .75rem;
 }
 .contact__social{
-  justify-content: initial;
+  justify-content: center;
+}
+
+.contact__social i{
+  font-size: 50px;
 }
 .contact__img{
   width: 320px;
