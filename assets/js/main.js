@@ -69,24 +69,6 @@ const scrollActive = () => {
 }
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
-const sr = ScrollReveal({
-    origin: 'top',
-    distance: '60px',
-    duration: 2500,
-    delay: 300,
-    reset: true,
-})
-
-sr.reveal('.home__data, .favorites__container, .footer__container')
-sr.reveal('.home__circle, .home__img', {delay: 600, scale: .5})
-sr.reveal('.home__image', {delay: 1000, interval: 100})
-sr.reveal('.care__img, .contact__img', {origin: 'left'})
-sr.reveal('.care__list, .contact__data', {origin: 'right'})
-sr.reveal('.banner__item, .product__card', {interval: 100})
-
-
-
-
 
 
 

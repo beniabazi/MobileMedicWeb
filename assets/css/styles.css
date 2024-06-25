@@ -316,6 +316,8 @@ img {
   box-shadow: inset var(--shadow-button);
 }
 
+
+
 .button__ghost{
   background-color: transparent;
   box-shadow: none;
