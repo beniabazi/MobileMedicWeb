@@ -75,5 +75,75 @@ const scrollActive = () => {
 
 
 
+/* ======== Pop Up Quote ================= */
+
+const openQuoteButtons = document.querySelectorAll('[data-quote-target]')
+const closeQuoteButtons = document.querySelectorAll('[data-close-button]')
+
+const openRepairButtons = document.querySelectorAll('[data-quote-target]')
+const closeRepairButtons = document.querySelectorAll('[data-close-button]')
+const overlay =document.getElementById('overlay')
 
 
+
+openQuoteButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const quote = document.querySelector(button.dataset.quoteTarget)
+        openQuote(quote)
+    })
+})
+closeQuoteButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const quote = button.closest('.quote')
+        closeQuote(quote)
+    })
+})
+openRepairButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const repair = document.querySelector(button.dataset.repairTarget)
+        openRepair(repair)
+    })
+})
+closeRepairButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const repair = button.closest('.repair')
+        closeRepair(repair)
+    })
+})
+
+overlay.addEventListener('click', () => {
+    const quote = document.querySelectorAll('.quote.active')
+    quote.forEach(quote => {
+        closeQuote(quote)
+    })
+})
+overlay.addEventListener('click', () => {
+    const repair = document.querySelectorAll('.repair.active')
+    repair.forEach(repair => {
+        closeRepair(repair)
+    })
+})
+
+
+function openQuote(quote) {
+    if (quote == null) return
+    quote.classList.add('active')
+    overlay.classList.add('active')
+}
+function closeQuote(quote) {
+    if (quote == null) return
+    quote.classList.remove('active')
+    overlay.classList.remove('active')
+}
+function openRepair(repair) {
+    if (repair == null) return
+    repair.classList.add('active')
+    overlay.classList.add('active')
+}
+function closeRepair(repair) {
+    if (repair == null) return
+    repair.classList.remove('active')
+    overlay.classList.remove('active')
+}
+
+/* ======== Pop Up Repair ================= */

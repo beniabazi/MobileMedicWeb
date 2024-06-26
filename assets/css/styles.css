@@ -542,7 +542,149 @@ margin-top: 3rem;
   bottom: 3rem;
 }
 
+.quote {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid var(--second-color);
+  border-radius: 10px;
+  z-index: 10;
+  background: var(--first-color-darken);
+  width: 500px;
+  max-width: 80%;
+}
 
+.quote.active{
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.quote__header{
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--first-color-dark);
+}
+
+.quote__header .title{
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.quote__header .close__button{
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--first-color-dark);
+}
+
+.quote__body{
+  padding: 10px 15px;
+}
+
+.repair {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid var(--second-color);
+  border-radius: 10px;
+  z-index: 10;
+  background: var(--first-color-darken);
+  width: 500px;
+  max-width: 80%;
+}
+
+.repair.active{
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.repair__header{
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--first-color-dark);
+}
+
+.repair__header .title{
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.repair__header .close__button{
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--first-color-dark);
+}
+
+.repair__body{
+  padding: 10px 15px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 5rem;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 10px;
+
+}
+
+form input, form textarea{
+  border: 0;
+  margin: 10px 0px;
+  padding: 20px;
+  outline: none;
+  font-size: 16px;
+}
+
+form button{
+  padding: 15px;
+  background: var(--first-color);
+  color: var(--second-color);
+  font-size: 18px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  width: 150px;
+  margin: 20px auto 0px;
+  border-radius: 30px;
+}
+
+#overlay{
+  z-index: 9;
+  position: fixed;
+  transition: 200ms ease-in-out;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+#overlay.active{
+  pointer-events: all;
+  opacity: 1;
+}
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
