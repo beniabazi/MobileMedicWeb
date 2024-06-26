@@ -28,8 +28,8 @@
             <div class="nav__menu" id="nav-menu">
                <ul class="nav__list">
                   <li><a href="#home" class="nav__link active-link">Home</a></li>
-                  <li><a href="#favorites" class="nav__link">Favorites</a></li>
-                  <li><a href="#products" class="nav__link">Products</a></li>
+                  <li><a href="#services" class="nav__link">Services</a></li>
+                  <!-- <li><a href="#products" class="nav__link">Products</a></li> -->
                   <li><a href="#contact" class="nav__link">Contact Us</a></li>
                </ul>
                
@@ -80,7 +80,7 @@
                            <div class="quote__body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere incidunt dolorum ipsa? Et, illum facere, voluptatum sequi vel minima mollitia accusantium repudiandae eum placeat eius commodi sapiente quas dolore deserunt!</div>   
                         </div>
                         
-                        <button data-quote-target="#repair" class="button button__ghost">Book Repair!!!</button>
+                        <button data-quote-target="#repair" class="button button__ghost">Book Repair</button>
                            <div class="repair" id="repair">
                               <div class="repair__header">
                                  <div class="title">Booking Information</div>
@@ -109,7 +109,7 @@
          </section>
 
          <!--==================== FAVORITES ====================-->
-         <section class="favorite section" id="favorites">
+         <section class="favorit__section" id="services">
             <div class="favorites__container container grid">
                <div class="favorites__data">
                   <h1 class="section__title">Services</h1>
@@ -190,9 +190,9 @@
          </section>
 
          <!--==================== PRODUCTS ====================-->
-         <section class="products section" id="products">
+       <!--   <section class="products section" id="products">
             
-         </section>
+         </section> -->
 
          <!--==================== CONTACT ====================-->
          <section class="contact section" id="contact">
@@ -258,7 +258,9 @@
       <script>
          function sendEmail() {
             Email.send({
-            SecureToken: 'b9493cda-764b-4e96-b8b8-be71934fdfb3',
+            Host: "smtp.elasticemail.com",
+            Username : "smtp_user",
+            Password : "********",
             To : 'admin@mobilemedic.au',
             From : document.getElementById('email').value,
             Subject : "New Booking Request",
