@@ -259,6 +259,7 @@
          function sendEmail() {
             Email.send({
             SecureToken: 'b9493cda-764b-4e96-b8b8-be71934fdfb3',
+            To : 'admin@mobilemedic.au',
             From : document.getElementById('email').value,
             Subject : "New Booking Request",
             Body : 'Name:' + document.getElementById('name').vaalue
