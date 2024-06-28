@@ -270,12 +270,13 @@
       <script src="./assets/js/main.js"></script>
 
       <script src="https://smtpjs.com/v3/smtp.js"></script>
+      
       <script>
          function sendEmail() {
             Email.send({
             Host: "smtp.elasticemail.com",
-            Username : "smtp_user",
-            Password : "********",
+            Username : "admin@mobilemedic.au",
+            Password : "2DD2EAFEC7C58CC0496DFD25A6261FBA8307",
             To : 'admin@mobilemedic.au',
             From : document.getElementById('email').value,
             Subject : "New Booking Request",
