@@ -19,18 +19,20 @@
       <title>Mobile Medic-Emergency Phone Repairs</title>
    </head>
    <body>
-      <div id="overlay"></div>
+   <div id="overlay"></div>
       <!--==================== HEADER ====================-->
       <header class="header" id="header">
-         <nav class="nav container">
-            <a href="" class="nav__logo">Mobile Medic</a>
+         <nav class="nav__container">
+            <a href="" class="nav__logo">
+               <img src="./assets/img/Logo_4.png" alt="">
+            </a>
 
             <div class="nav__menu" id="nav-menu">
                <ul class="nav__list">
                   <li><a href="#home" class="nav__link active-link">Home</a></li>
                   <li><a href="#services" class="nav__link">Services</a></li>
-                  <!-- <li><a href="#products" class="nav__link">Products</a></li> -->
                   <li><a href="#contact" class="nav__link">Contact Us</a></li>
+                  <!-- <li><a onclick="" class="nav__link">Book Now</a></li> -->
                </ul>
                
                <!-- Close Button-->
@@ -64,90 +66,59 @@
          <section class="home__section" id="home">
                <div class="home__container container grid">
                   <div class="home__data">
-                     <h1 class="home__title">24/7 Phone Repair
-                        <br> <h1>Because Emergencies Don't Wait.</h1>
-                     <p class="home__description">
-                        
-                     </p>
-                     <img src="./assets/img/" alt="" class="home__meat">
-                     <div class="home__buttons">
-                        <button data-quote-target="#quote" class="button">Get Quote</button>
-                        <div class="quote" id="quote">
-                           <div class="quote__header">
-                              <div class="title">Get a Quote</div>
-                              <button data-close-button class="close__button">&times;</button>
-                           </div>
-                           <div class="quote__body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere incidunt dolorum ipsa? Et, illum facere, voluptatum sequi vel minima mollitia accusantium repudiandae eum placeat eius commodi sapiente quas dolore deserunt!</div>   
-                        </div>
-                        
-                        <button data-quote-target="#repair" class="button button__ghost">Book Repair</button>
-                           <div class="repair" id="repair">
-                              <div class="repair__header">
-                                 <div class="title">Booking Information</div>
-                                 <button data-close-button class="close__button">&times;</button>
+                     <h1 class="home__title">24/7 Phone Repair <br> <h1>Because Emergencies Don't Wait.</h1> </div>           
+                           <div class="home__images">
+                              <div class="home__circle">
+                                 <div class="home__subcircle">
+                                 <img src="./assets/img/Logo_large.png" alt="image" class="home__image">
                               </div>
-                              <form onsubmit="sendEmail(); reset(); return false;" class="repair__body">
-                                 <input type="text" id="name" placeholder="Your Name" required>
-                                 <input type="email" id="email" placeholder="Enter Email" required>
-                                 <input type="text" id="phone" placeholder="Enter Phone Number" required>
-                                 <textarea id="message" rows="5" placeholder="Provide issue details."></textarea>
-                                 <button type="submit">Send</button>
-                              </form>
-                           </div>   
+                           </div>
                         </div>
-                     </div>
-                  
-                  <div class="home__images">
-                     <div class="home__circle">
-                        <div class="home__subcircle"></div>
-                     </div>
-
-                     <img src="./assets/img/Logo_large.png" alt="image" class="home__image">
-          
+                     </div>                                              
                   </div>
                </div>
          </section>
 
-         <!--==================== FAVORITES ====================-->
-         <section class="favorit__section" id="services">
-            <div class="favorites__container container grid">
-               <div class="favorites__data">
-                  <h1 class="section__title">Services</h1>
-                  <p class="favorites__description"></p>
-               </div>
-
-               <div class="favorites__swiper swiper">
-                  <div class="swiper-wrapper">
-                     <article class="favorites__article swiper-slide">
-                        <img src="./assets/img/Screen-repair.png" alt="image" class="favorites__img">
-                     </article>
-
-                     <article class="favorites__article swiper-slide">
-                        <img src="./assets/img/battery_repair.png" alt="image" class="favorites__img">
-                     </article>
-
-                     <article class="favorites__article swiper-slide">
-                        <img src="./assets/img/speaker_repairs.png" alt="image" class="favorites__img">
-                     </article>
-
-                     <article class="favorites__article swiper-slide">
-                        <img src="./assets/img/microphone_repairs.png" alt="image" class="favorites__img">
-                     </article>
-
-                     <article class="favorites__article swiper-slide">
-                        <img src="./assets/img/camera_repairs.png" alt="image" class="favorites__img">
-                     </article>
-
-                     <article class="favorites__article swiper-slide">
-                        <img src="./assets/img/diagnostics.png" alt="image" class="favorites__img">
-                     </article>
-                     <article class="favorites__article swiper-slide">
-                        <img src="./assets/img/water_damage.png" alt="image" class="favorites__img">
-                     </article>
+         <section class="home__buttons_ ">
+            <button data-quote-target="#quote" class="button">Check Pricing</button>
+               <div class="quote" id="quote">
+                  <div class="quote__header">
+                     <div class="title">Get a Quote</div>
+                     <button data-close-button class="close__button">&times;</button>
                   </div>
-               </div>
-            </div>
-         </section>
+                     <form class="repair__body">
+                        <select name="" id="country">
+                           <option value=""> DEVICE TYPE </option>
+                        </select>
+                        <select name="" id="state">
+                           <option value=""> SELECT BRAND </option>
+                        </select>
+                        <select name="" id="city">
+                           <option value=""> SELECT MODEL </option>
+                        </select>
+                        <select name="" id="zip">
+                           <option value=""> SELECT ISSUE </option>
+                        </select>
+                        <button type="submit">Request Booking</button>
+                     </form>
+               </div>      
+
+            <button data-quote-target="#repair" class="button button__ghost">Request Booking</button>
+               <div class="repair" id="repair">
+                  <div class="repair__header">
+                     <div class="title">Booking Information</div>
+                     <button data-close-button class="close__button">&times;</button>
+                  </div>
+                  <form onsubmit="sendEmail(); reset(); return false;" class="repair__body">
+                     <input type="text" id="name" placeholder="Your Name" required>
+                     <input type="email" id="email" placeholder="Enter Email" required>
+                     <input type="text" id="phone" placeholder="Enter Phone Number" required>
+                     <textarea id="message" rows="5" placeholder="Provide issue details."></textarea>
+                     <button type="submit">Send</button>
+                  </form>
+               </div>   
+            </section>
+
 
          <!--==================== CARE ====================-->
          <section class="care section" id="care">
@@ -173,6 +144,48 @@
             </dic>
          </section>
 
+
+                  <!--==================== FAVORITES ====================-->
+                  <section class="favorite__section" id="services">
+                     <div class="favorites__container container grid">
+                        <div class="favorites__data">
+                           <h1 class="section__title">Services</h1>
+                           <p class="favorites__description"></p>
+                        </div>
+         
+                        <div class="favorites__swiper swiper">
+                           <div class="swiper-wrapper">
+                              <article class="favorites__article swiper-slide">
+                                 <img src="./assets/img/Screen-repair.png" alt="image" class="favorites__img">
+                              </article>
+         
+                              <article class="favorites__article swiper-slide">
+                                 <img src="./assets/img/battery_repair.png" alt="image" class="favorites__img">
+                              </article>
+         
+                              <article class="favorites__article swiper-slide">
+                                 <img src="./assets/img/speaker_repairs.png" alt="image" class="favorites__img">
+                              </article>
+         
+                              <article class="favorites__article swiper-slide">
+                                 <img src="./assets/img/microphone_repairs.png" alt="image" class="favorites__img">
+                              </article>
+         
+                              <article class="favorites__article swiper-slide">
+                                 <img src="./assets/img/camera_repairs.png" alt="image" class="favorites__img">
+                              </article>
+         
+                              <article class="favorites__article swiper-slide">
+                                 <img src="./assets/img/diagnostics.png" alt="image" class="favorites__img">
+                              </article>
+                              <article class="favorites__article swiper-slide">
+                                 <img src="./assets/img/water_damage.png" alt="image" class="favorites__img">
+                              </article>
+                           </div>
+                        </div>
+                     </div>
+                  </section>
+         
          <!--==================== BANNER ====================-->
          <section class="banner">
             <div class="banner__container">
@@ -197,10 +210,10 @@
          <!--==================== CONTACT ====================-->
          <section class="contact section" id="contact">
             <div class="contact__container container">
-               <div class="contact__content grid">
-                  <div class="contact__data grid">
+               <div class="contact__content">
+                  <div class="contact__data">
                      <div>
-                        <h2 class="section__title">CONTACT US TO BOOK IN YOUR REPAIR</h2>
+                        <h2 class="section__title">CONTACT US</h2>
                         <div class="contact__social">
                            <a href="https://wa.me/+61466855790" target="_blank">
                               <i class="ri-whatsapp-fill"></i>
@@ -224,7 +237,9 @@
       <!--==================== FOOTER ====================-->
       <footer class="footer">
          <div class="footer__container container grid">
-            <a href="" class="footer__logo">MOBILE MEDIC</a>
+            <a href="" class="footer__logo">
+               <img src="./assets/img/Logo_4.png" alt="">
+            </a>
             <div class="footer__content grid">
                <a href="#" class="footer__link">Terms of Service</a>
                <a href="#" class="footer__link">Privacy Policy</a>
