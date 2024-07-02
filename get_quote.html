@@ -71,7 +71,7 @@
 <main class="booking-main">
          <form class="booking-form" id="booking-form">
             <div><h1 class="quote__header title">Repair Booking Form</h1></div>
-               <div class="form-group form__1">
+               <div class="form-group">
                   <label for="device-type">Device Type:</label>
                      <select name="device-type" id="device-type">
                         <option value="">Select Device Type</option>
@@ -79,6 +79,7 @@
                         <option value="Samsung">Samsung</option>
                         <option value="Google">Google</option>
                      </select>
+                  </div>
                   <div class="form-group">
                      <label for="brand">Brand:</label>
                         <select name="brand" id="brand" disabled>
@@ -95,8 +96,9 @@
                      <label id="repair-prices" for="repair-prices">Repair Prices:</label>
                   <div id="repair-prices"></div>               
                </div>
+               <br>
                </div>
-               <div class="form-group-details">
+               <div class="form-group">
                   <label for="name">Name:</label>
                   <input type="text" name="name" id="name" required>
                <br>
@@ -108,26 +110,26 @@
                <br>
                   <textarea type="detail" name="details" id="details" rows="5" placeholder="Additional Details"></textarea>
                </div>
-            <button type="submit" onclick="sendMail()" class="button">Submit Booking Request</button>
+            <button type="submit" onclick="sendMail()" class="button">Send</button>
          </form>    
 </main>
 
       <!--==================== FOOTER ====================-->
-      <footer class="footer">
-         <div class="footer__container container grid">
-            <a href="" class="footer__logo">
+<footer class="footer">
+   <div class="footer__container container grid">
+         <a href="" class="footer__logo">
                <img src="./assets/img/Logo_4.png" alt="">
-            </a>
-            <div class="footer__content grid">
+         </a>
+         <div class="footer__content grid">
                <a href="#" class="footer__link">Terms of Service</a>
                <a href="#" class="footer__link">Privacy Policy</a>
 
                <span>
                   &#169; All Rights Reserved by Mobile Medic
                </span>
-            </div>
          </div>
-      </footer>
+      </div>
+</footer>
 
       <!--========== SCROLL UP ==========-->
       <a href="" class="scroll-up" id="scroll-up">
