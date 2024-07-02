@@ -116,9 +116,6 @@ function sendMail() {
   }
 
   emailjs.send("service_lq7hi5q","template_8ashmvq",parms).then(alert("Email Sent"))
-
-
-
 }
 
 
