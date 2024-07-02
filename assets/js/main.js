@@ -160,7 +160,7 @@ function closeRepair(repair) {
 }
 
 /* ======== Pop Up Quote Selector ================= */
-
+/* 
 var countryStateCityinfo = {
   Phone: {
     "Apple": {
@@ -221,7 +221,7 @@ window.onload = function(){
   //drop down functions
 for(let country in countryStateCityinfo){
   /* console.log(country); */
-  selectCountry.options[selectCountry.options.length] = new Option(country, country)
+ /*  selectCountry.options[selectCountry.options.length] = new Option(country, country)
 }
 
 //country change
@@ -297,4 +297,25 @@ for(let i=0; i<zips.length; i++){
 }
 
 }
+
+ */
+
+/* ========= Email Script ============== */
+
+ function sendEmail() {
+            Email.send({
+            Host: "smtp.elasticemail.com",
+            Username : "admin@mobilemedic.au",
+            Password : "2DD2EAFEC7C58CC0496DFD25A6261FBA8307",
+            To : 'admin@mobilemedic.au',
+            From : document.getElementById('email').value,
+            Subject : "New Booking Request",
+            Body : 'Name:' + document.getElementById('name').vaalue
+               + '<br> Email:' + document.getElementById('email').value
+               + '<br> Phone:' + document.getElementById('phone').value
+               + '<br> Message:' + document.getElementById('message').value
+               }).then(
+               message => alert('Sent Successfully')
+               );
+         }
 

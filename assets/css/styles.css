@@ -302,9 +302,10 @@ img {
 /*=============== BUTTON ===============*/
 .button{
   background-color: var(--second-color);
-  color: var(--second-color-dark);
+  color: var(--first-color);
   font-weight: var(--font-semi-bold);
   font-size: 1.2rem;
+  text-align: center;
   padding: .75rem 2rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
@@ -314,6 +315,7 @@ img {
 
 .button__ghost{
   background-color: transparent;
+  color: var(--second-color-dark);
   box-shadow: none;
   border: 3px solid var(--second-color);
 }
@@ -559,6 +561,7 @@ box-shadow: inset;
 
 .quote.active{
   transform: translate(-50%, -50%) scale(1);
+  width: 600px;
 }
 
 .quote__header{
@@ -570,7 +573,7 @@ box-shadow: inset;
 }
 
 .quote__header .title{
-  font-size: 1.25rem;
+  font-size: 1.6rem;
   font-weight: bold;
 }
 
@@ -598,8 +601,9 @@ box-shadow: inset;
   border-radius: 10px;
   z-index: 6;
   background: var(--first-color-darken);
-  width: 500px;
-  max-width: 80%;
+  width: fit-content;
+
+  max-width: 500px;
 }
 
 .repair.active{
@@ -631,12 +635,12 @@ box-shadow: inset;
 }
 
 .repair__body{
-  padding: 10px 15px;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+ margin: 3rem 3rem;
+}
+
+#repair-prices{
+  font-size: 1.3rem;
+  width: 120%;
 }
 
 form{
@@ -644,35 +648,40 @@ form{
   flex-direction: column;
   padding: 3rem 5rem;
   width: 90%;
-  max-width: 600px;
   border-radius: 10px;
   gap: 10px;
+  list-style: none;
 }
 
-form input, form textarea, form select{
-  width: 80%;
+form label{
+  font-size: 1.5rem;
+}
+
+form input, form textarea, form select, form option{
+  width: 100%;
   border: none;
   border-radius: 10px;
   margin: 10px 10px 10px 20px;
   padding: 20px;
   outline: none;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-family: var(--body-font);
-  box-shadow: 0 5px 10px 0 var(--first-color-dark);
   cursor: pointer;
 }
-
-form button{
+.button__form{
   padding: 15px;
-  background: var(--first-color);
-  color: var(--second-color);
+  background: var(--second-color);
+  box-shadow: inset var(--shadow-button);
+  color: var(--first-color);
   font-size: 18px;
   border: 0;
   outline: none;
   cursor: pointer;
   min-width: 150px;
-  margin: 20px auto 20px;
   border-radius: 30px;
+  padding: 20px;
+  margin-left: 20%;
+  text-align: center;
 }
 
 #overlay{
@@ -693,74 +702,119 @@ form button{
   opacity: 1;
 }
 
+
+/* ============== Quote Page================ */
+
+
+
+
+
+
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 540px){
-  .container{
-    margin-inline: 1rem;
+ /* ++++++++ MAIN SECTION++++++++++++ */
+    .container{
+      margin-inline: 1rem;
+    }
+    .section__title{
+      font-size: var(--h2-font-size);
+    }
+    .home__data{
+      margin-top: 5rem;
+    }
+    .home__title{
+      font-size: 3rem;
+    }
+    .home__buttons_{
+      flex-direction: column;
+      row-gap: .3rem;
+    }
+    .button .button__ghost{
+      font-size: .2rem;
+      width: .5rem;
+    }
+    .home__circle{
+      width: 250px;
+      height: 250px;
+    }
+    .home__subcircle{
+      width: 200px;
+      height: 200px;
+    }
+    .home__images .home__img{
+      width: 200px;
+    }
+
+/* ++++++++++ FORM SECTION - ACTIVE++++++++++++ */
+.quote{
+  margin-top: 50px;
+  height: 80%;
+}  
+
+form{
+    width: 400px;
+    height: 80%;
+    font-size: .6rem;
+    padding: 15%;
   }
 
-  .section__title{
-    font-size: var(--h2-font-size);
-  }
 
-  .home__data{
-    margin-top: 5rem;
-  }
-
-  .home__title{
-    font-size: 3rem;
-  }
-
-  form input, form textarea, form select{
-    width: 80%;
+  form select{
+    width:200px;
+    height: 25px;
     border: none;
     border-radius: 10px;
-    margin: 5px 0px 0px 5px;
-    padding: 10px;
+    font-size: .6rem;    
     outline: none;
-    font-size: 1rem;
-    font-family: var(--body-font);
     box-shadow: 0 1px 3px 0 var(--first-color-dark);
     cursor: pointer;
+    padding: 0;
+    margin-left: 0px;
+    display: flow-root;
   }
 
-.button{
-  font-size: medium;
-}
-
-  .home__buttons{
-    flex-direction: column;
-    row-gap: 1rem;
-  }
-  .home__circle{
-    width: 250px;
-    height: 250px;
-  }
-  .home__subcircle{
-    width: 200px;
-    height: 200px;
-  }
-  .home__images .home__img{
-    width: 200px;
+  #repair-prices{
+    font-size: .6rem;
+    width:300px;
+    margin-top: 20px;
+    padding-left: 10%;
   }
 
+  .button__form{
+    width: 150px;
+    height: 40px;
+    background-color: var(--second-color);
+    color: var(--first-color);
+    font-weight: var(--font-semi-bold);
+    font-size: 1rem;
+    text-align: center;
+    padding: 8px;
+    margin-left: 0;
+    border-radius: 4rem;
+    box-shadow: inset var(--shadow-button);
+  }
+
+  /* ============= Product Section ================= */
   .product__content{
     grid-template-columns: 160px;
     justify-content: center;
   }
+
+  /* ========== Footer Section ============= */
   .footer__content{
     grid-template-columns: 1fr;
     justify-items: center;
     row-gap: 1.5rem;
+
   }
   .footer__copy{
     grid-column: 1;
   }
 }
 
-/* For medium devices */
-@media screen and (min-width: 540px){
+/* ========= For medium devices ============== */
+@media screen and (min-width: 540px) and (max-width: 767px){
   .home__container,
   .favorites__container,
   .care__container{
@@ -781,12 +835,65 @@ form button{
     justify-content: center;
   }
 
+  .home__buttons_{
+    font-size: .7rem;
+  }
+
   .contact{
     display: grid;
     grid-template-columns: 450px;
     justify-content: center;
   }
+
+
+.quote{
+  margin-top: 30px;
+}  
+
+form{
+    width: 500px;
+    height: 600px;
+    font-size: 1.1rem;
+    padding: 20px;
+    align-items: center;
+  }
+
+  form select{
+    width:200px;
+    height: 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: .6rem;    
+    outline: none;
+    box-shadow: 0 1px 3px 0 var(--first-color-dark);
+    cursor: pointer;
+    padding: 0;
+    margin-right: 0px;
+    display: flow-root;
+  }
+
+  #repair-prices{
+    font-size: .8rem;
+    width:300px;
+    margin-top: 20px;
+    padding-left: 10%;
+  }
+
+  .button__form{
+    width: 150px;
+    height: 40px;
+    background-color: var(--second-color);
+    color: var(--first-color);
+    font-weight: var(--font-semi-bold);
+    font-size: 1rem;
+    text-align: center;
+    padding: 8px;
+    margin-left: 15%;
+    border-radius: 4rem;
+    box-shadow: inset var(--shadow-button);
+  }
 }
+
 
 @media screen and (min-width: 768px){
   .product__content{
@@ -796,6 +903,10 @@ form button{
  /*  .contact{
     grid-template-columns: 550px;
   } */
+
+  .home__buttons_{
+    font-size: .7rem;
+  }
 
   .home__data{
     margin-top: 3rem;
@@ -814,11 +925,11 @@ form button{
   .footer__link:nth-child(2){
     order: 1;
   }
-
+  
 
 }
 
-/* For large devices */
+/* ============== For large devices =================== */
 @media screen and (min-width: 1150px){
   
   .container{

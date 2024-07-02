@@ -29,10 +29,10 @@
 
             <div class="nav__menu" id="nav-menu">
                <ul class="nav__list">
-                  <li><a href="#home" class="nav__link active-link">Home</a></li>
-                  <li><a href="#services" class="nav__link">Services</a></li>
-                  <li><a href="#contact" class="nav__link">Contact Us</a></li>
-                  <!-- <li><a onclick="" class="nav__link">Book Now</a></li> -->
+                  <li><a href="index.html" class="nav__link active-link">Home</a></li>
+                  <li><a href="index.html#services" class="nav__link">Services</a></li>
+                  <li><a href="index.html#contact" class="nav__link">Contact Us</a></li>
+                  <li><a href="get_quote.html" class="nav__link button">Book Repair</a></li>
                </ul>
                
                <!-- Close Button-->
@@ -66,7 +66,7 @@
          <section class="home__section" id="home">
                <div class="home__container container grid">
                   <div class="home__data">
-                     <h1 class="home__title">24/7 Phone Repair <br> <h1>Because Emergencies Don't Wait.</h1> </div>           
+                     <h1 class="home__title">24/7 Phone Repair </div>           
                            <div class="home__images">
                               <div class="home__circle">
                                  <div class="home__subcircle">
@@ -79,45 +79,46 @@
                </div>
          </section>
 
-         <section class="home__buttons_ ">
-            <button data-quote-target="#quote" class="button">Check Pricing</button>
+         <section class="home__buttons_">
+            <button data-quote-target="#quote" class="button">$ Check Prices $ </i></i></button>
+            
                <div class="quote" id="quote">
                   <div class="quote__header">
                      <div class="title">Get a Quote</div>
                      <button data-close-button class="close__button">&times;</button>
                   </div>
-                     <form class="repair__body">
-                        <select name="" id="country">
-                           <option value=""> DEVICE TYPE </option>
-                        </select>
-                        <select name="" id="state">
-                           <option value=""> SELECT BRAND </option>
-                        </select>
-                        <select name="" id="city">
-                           <option value=""> SELECT MODEL </option>
-                        </select>
-                        <select name="" id="zip">
-                           <option value=""> SELECT ISSUE </option>
-                        </select>
-                        <button type="submit">Request Booking</button>
-                     </form>
-               </div>      
-
-            <button data-quote-target="#repair" class="button button__ghost">Request Booking</button>
-               <div class="repair" id="repair">
-                  <div class="repair__header">
-                     <div class="title">Booking Information</div>
-                     <button data-close-button class="close__button">&times;</button>
+               <form>
+                  <div class="form-group">
+                        <label for="device-type">Device Type:</label>
+                              <select name="device-type" id="device-type">
+                                    <option value="">Select Device Type</option>
+                                    <option value="Apple">Apple</option>
+                                    <option value="Samsung">Samsung</option>
+                                    <option value="Google">Google</option>
+                              </select>
+                        <label for="brand">Brand:</label>
+                              <select name="brand" id="brand" disabled>
+                                    <option value="">Select Brand</option>
+                              </select>
+                        <label for="model">Model:</label>
+                              <select name="model" id="model" disabled>
+                                 <option value="">Select Model</option>
+                              </select>
                   </div>
-                  <form onsubmit="sendEmail(); reset(); return false;" class="repair__body">
-                     <input type="text" id="name" placeholder="Your Name" required>
-                     <input type="email" id="email" placeholder="Enter Email" required>
-                     <input type="text" id="phone" placeholder="Enter Phone Number" required>
-                     <textarea id="message" rows="5" placeholder="Provide issue details."></textarea>
-                     <button type="submit">Send</button>
-                  </form>
-               </div>   
-            </section>
+                       <!--  <div class="price__list"> -->
+                        <label id="repair-prices" for="repair-prices"></label>
+                              <div id="repair-prices"></div>
+                        
+                                              
+                        <a href="get_quote.html" class="button__form">Book Repair</a>
+                     
+                  </div>
+               </form>
+               </div>      
+               <div>
+                     <a href="get_quote.html" class="button button__ghost">Book Repair <i class="ri-truck-line"></i></a>
+               </div>
+         </section>
 
 
          <!--==================== CARE ====================-->
@@ -270,24 +271,7 @@
       <script src="./assets/js/main.js"></script>
 
       <script src="https://smtpjs.com/v3/smtp.js"></script>
-
-      <script>
-         function sendEmail() {
-            Email.send({
-            Host: "smtp.elasticemail.com",
-            Username : "admin@mobilemedic.au",
-            Password : "2DD2EAFEC7C58CC0496DFD25A6261FBA8307",
-            To : 'admin@mobilemedic.au',
-            From : document.getElementById('email').value,
-            Subject : "New Booking Request",
-            Body : 'Name:' + document.getElementById('name').vaalue
-               + '<br> Email:' + document.getElementById('email').value
-               + '<br> Phone:' + document.getElementById('phone').value
-               + '<br> Message:' + document.getElementById('message').value
-               }).then(
-               message => alert('Sent Successfully')
-               );
-         }
-      </script>
+      <script src="/assets/js/pricelist.js"></script>
+      <script src="/assets/json/repairData.json"></script>
    </body>
 </html>

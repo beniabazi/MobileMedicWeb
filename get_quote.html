@@ -1,11 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <button>Get Quote</button>
-</body>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== FAVICON ===============-->
+      <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+      <!--=============== REMIXICONS ===============-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+
+      <!--=============== SWIPER CSS ===============-->
+      <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
+
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="assets/css/styles.css">
+
+      <title>Mobile Medic-Emergency Phone Repairs</title>
+   </head>
+   <body>
+   <div id="overlay"></div>
+      <!--==================== HEADER ====================-->
+      <header class="header" id="header">
+         <nav class="nav__container">
+            <a href="index.html" class="nav__logo">
+               <img src="./assets/img/Logo_4.png" alt="">
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+                  <li><a href="index.html" class="nav__link active-link">Home</a></li>
+                  <li><a href="index.html#services" class="nav__link">Services</a></li>
+                  <li><a href="index.html#contact" class="nav__link">Contact Us</a></li>           
+               </ul>
+               
+               <!-- Close Button-->
+               <div class="nav__close" id="nav-close">
+                  <i class="ri-close-large-fill"></i>
+               </div>
+
+               <div class="nav__social">
+                  <a href="https://www.facebook.com/profile.php?id=61560369729744" target="_blank" class="nav__social-link">
+                     <i class="ri-facebook-circle-line"></i>
+                  </a>
+                  <a href="https://www.instagram.com/mobile_medic_phone_rescue/" target="_blank" class="nav__social-link">
+                     <i class="ri-instagram-line"></i>
+                  </a>
+                  <a href="https://www.youtube.com/channel/UCnswW9ewtbCCb6DHYWU-Fhw" target="_blank" class="nav__social-link">
+                     <i class="ri-youtube-line"></i>
+                  </a>
+               </div>
+            </div>
+            <div class="nav__toggle" id="nav-toggle">
+               <i class="ri-apps-2-line"></i>
+            </div>
+         </nav>
+      </header>
+
+    <!--==================== MAIN ====================-->
+<main class="booking-main">
+         <form class="booking-form" id="booking-form">
+            <div><h1 class="quote__header title">Repair Booking Form</h1></div>
+               <div class="form-group form__1">
+                  <label for="device-type">Device Type:</label>
+                     <select name="device-type" id="device-type">
+                           <option value="">Select Device Type</option>
+                           <option value="phone">Phone</option>
+                           <option value="tablet">Tablet</option>
+                     </select>
+                  <div class="form-group">
+                     <label for="brand">Brand:</label>
+                        <select name="brand" id="brand" disabled>
+                           <option value="">Select Brand</option>
+                        </select>
+                  </div>
+                  <div class="form-group">
+                     <label for="model">Model:</label>
+                        <select name="model" id="model" disabled>
+                           <option value="">Select Model</option>
+                        </select>
+                  </div>
+                  <div class="form-group">
+                     <label id="repair-prices" for="repair-prices">Repair Prices:</label>
+                  <div id="repair-prices"></div>               
+               </div>
+               </div>
+            
+
+            <div class="form-group-details">
+               <label for="name">Name:</label>
+               <input type="text" name="name" id="name" required>
+            <br>
+               <label for="email">Email:</label>
+               <input type="email" name="email" id="email" required>
+            <br>
+               <label for="phone">Phone Number:</label>
+               <input type="tel" name="phone" id="phone" required>
+            <br>
+               <textarea type="detail" name="details" id="details" rows="5" placeholder="Additional Details"></textarea>
+            </div>
+            <button type="submit" class="button">Submit Booking Request</button>
+         </form>    
+</main>
+
+      <!--==================== FOOTER ====================-->
+      <footer class="footer">
+         <div class="footer__container container grid">
+            <a href="" class="footer__logo">
+               <img src="./assets/img/Logo_4.png" alt="">
+            </a>
+            <div class="footer__content grid">
+               <a href="#" class="footer__link">Terms of Service</a>
+               <a href="#" class="footer__link">Privacy Policy</a>
+
+               <span>
+                  &#169; All Rights Reserved by Mobile Medic
+               </span>
+            </div>
+         </div>
+      </footer>
+
+      <!--========== SCROLL UP ==========-->
+      <a href="" class="scroll-up" id="scroll-up">
+         <i class="ri-arrow-up-line"></i></a>
+      
+
+      <!--=============== SCROLLREVEAL ===============-->
+      <script src="./assets/js/scrollreveal.min.js"></script>
+
+      <!--=============== SWIPER JS ===============-->
+      <script src="./assets/js/swiper-bundle.min.js"></script>
+
+      <!--=============== MAIN JS ===============-->
+      <script src="./assets/js/main.js"></script>
+    
+      <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+      <script src="./assets/js/booking.js"></script>
+   </body>
 </html>
