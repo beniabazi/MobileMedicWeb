@@ -101,6 +101,7 @@ modelSelect.addEventListener("change", populateRepairPrices);
 // **Initial population (optional)**
 populateBrandSelect();
 
+/* ================================================================================ */
 
 function sendMail() {
   let parms = {
@@ -114,7 +115,7 @@ function sendMail() {
     prices : document.getElementById("repair-prices").value,
   }
 
-  emailjs.send("service_wsxz7mk","template_8ashmvq",parms).then(alert("Email Sent"))
+  emailjs.send("service_lq7hi5q","template_8ashmvq",parms).then(alert("Email Sent"))
 
 
 
