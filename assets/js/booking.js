@@ -115,5 +115,5 @@ function sendMail() {
     prices: document.getElementById("repair-prices").value,
   };
 
-  emailjs.send("service_wsxz7mk", "template_8ashmvq", parms).then(alert("Email Sent"));
+  emailjs.send("service_pfanqep", "template_8ashmvq",parms).then(alert("Email Sent"));
 }
