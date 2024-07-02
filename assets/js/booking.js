@@ -17,41 +17,41 @@ fetch("./assets/json/repairData.json")
 
 // Function to populate brand select based on device type
 function populateBrandSelect() {
-    const selectedDeviceType = deviceTypeSelect.value;
-    brandSelect.innerHTML = '<option value="">Select Brand</option>'; // Set default option
-    if (selectedDeviceType) {
-      const brands = Object.keys(repairData[selectedDeviceType]);
-      brands.forEach((brand) => {
-        const option = document.createElement("option");
-        option.value = brand;
-        option.textContent = brand;
-        brandSelect.appendChild(option);
-      });
-      brandSelect.disabled = false;
-    } else {
-      brandSelect.disabled = true;
-    }
+  const selectedDeviceType = deviceTypeSelect.value;
+  brandSelect.innerHTML = '<option value="">Select Brand</option>'; // Set default option
+  if (selectedDeviceType) {
+    const brands = Object.keys(repairData[selectedDeviceType]);
+    brands.forEach((brand) => {
+      const option = document.createElement("option");
+      option.value = brand;
+      option.textContent = brand;
+      brandSelect.appendChild(option);
+    });
+    brandSelect.disabled = false;
+  } else {
+    brandSelect.disabled = true;
   }
-  
-  // Function to populate model select based on device type and brand
-  function populateModelSelect() {
-    const selectedDeviceType = deviceTypeSelect.value;
-    const selectedBrand = brandSelect.value;
-    modelSelect.innerHTML = '<option value="">Select Model</option>'; // Set default option
-    if (selectedDeviceType && selectedBrand) {
-      const models = Object.keys(repairData[selectedDeviceType][selectedBrand]);
-      models.forEach((model) => {
-        const option = document.createElement("option");
-        option.value = model;
-        option.textContent = model;
-        modelSelect.appendChild(option);
-      });
-      modelSelect.disabled = false;
-    } else {
-      modelSelect.disabled = true;
-    }
+}
+
+// Function to populate model select based on device type and brand
+function populateModelSelect() {
+  const selectedDeviceType = deviceTypeSelect.value;
+  const selectedBrand = brandSelect.value;
+  modelSelect.innerHTML = '<option value="">Select Model</option>'; // Set default option
+  if (selectedDeviceType && selectedBrand) {
+    const models = Object.keys(repairData[selectedDeviceType][selectedBrand]);
+    models.forEach((model) => {
+      const option = document.createElement("option");
+      option.value = model;
+      option.textContent = model;
+      modelSelect.appendChild(option);
+    });
+    modelSelect.disabled = false;
+  } else {
+    modelSelect.disabled = true;
   }
-  
+}
+
 // Function to populate repair prices based on device type, brand, and model
 function populateRepairPrices() {
   const selectedDeviceType = deviceTypeSelect.value;
@@ -59,7 +59,8 @@ function populateRepairPrices() {
   const selectedModel = modelSelect.value;
   repairPricesDiv.textContent = ""; // Clear previous prices
   if (selectedDeviceType && selectedBrand && selectedModel) {
-    const repairOptions = repairData[selectedDeviceType][selectedBrand][selectedModel];
+    const repairOptions =
+      repairData[selectedDeviceType][selectedBrand][selectedModel];
     repairPricesDiv.innerHTML = "<h3>Available Repair Services:</h3>"; // Add heading
     let list = document.createElement("ul"); // Create an unordered list
     repairOptions.forEach((option) => {
@@ -87,7 +88,6 @@ function extractPrice(optionString) {
   return priceMatch ? parseFloat(priceMatch[1]) : 0;
 }
 
-
 // Event listeners
 deviceTypeSelect.addEventListener("change", () => {
   populateBrandSelect();
@@ -105,17 +105,17 @@ populateBrandSelect();
 
 function sendMail() {
   let parms = {
-    name : document.getElementById("name").value,
-    email : document.getElementById("email").value,
-    phone : document.getElementById("phone").value,
-    details : document.getElementById("details").value,
-    device : document.getElementById("device-type").value,
-    brand : document.getElementById("brand").value,
-    model : document.getElementById("model").value,
-    prices : document.getElementById("repair-prices").value,
-  }
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    phone: document.getElementById("phone").value,
+    details: document.getElementById("details").value,
+    device: document.getElementById("device-type").value,
+    brand: document.getElementById("brand").value,
+    model: document.getElementById("model").value,
+    prices: document.getElementById("repair-prices").value,
+  };
 
-  emailjs.send("service_lq7hi5q","template_8ashmvq",parms).then(alert("Email Sent"))
+  emailjs
+    .send("service_lq7hi5q", "template_8ashmvq", parms)
+    .then(alert("Email Sent"));
 }
-
-
