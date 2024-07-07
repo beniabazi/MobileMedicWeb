@@ -245,7 +245,7 @@
     },
 
     "Samsung": {  
-        "Samsung Galaxy": {
+        "Galaxy": {
             "Galaxy S10": [
                 "Screen Repair - $329",
                 "Back Glass - $79",
@@ -467,8 +467,8 @@
                 "Loud Speaker - $89"
             ]
         },
-        "Samsung Note": {
-            "Galaxy Note 10": [
+        "Note": {
+            "Note 10": [
                 "Screen Repair - $399",
                 "Back Glass - $79",
                 "Battery Replacement - $99",
@@ -479,7 +479,7 @@
                 "Ear Speaker - $89",
                 "Loud Speaker - $99"
             ],
-            "Galaxy Note 10 Plus": [
+            "Note 10 Plus": [
                 "Screen Repair - $499",
                 "Back Glass - $89",
                 "Battery Replacement - $99",
@@ -490,7 +490,7 @@
                 "Ear Speaker - $89",
                 "Loud Speaker - $99"
             ],
-            "Galaxy Note 20": [
+            "Note 20": [
                 "Screen Repair - $399",
                 "Back Glass - $79",
                 "Battery Replacement - $99",
@@ -501,7 +501,7 @@
                 "Ear Speaker - $89",
                 "Loud Speaker - $99"
             ],
-            "Galaxy Note 20 Ultra": [
+            "Note 20 Ultra": [
                 "Screen Repair - $449",
                 "Back Glass - $79",
                 "Battery Replacement - $99",
@@ -513,8 +513,8 @@
                 "Loud Speaker - $99"
             ]
         },
-        "Samsung Fold": {
-            "Galaxy Z Fold 2": [
+        "Fold": {
+            "Z Fold 2": [
                 "Outer Screen Repair - $299",
                 "Inner Screen Repair - $789",
                 "Back Glass - $89",
@@ -526,7 +526,7 @@
                 "Ear Speaker - $189",
                 "Loud Speaker - $189"
             ],
-            "Galaxy Z Fold 3": [
+            "Z Fold 3": [
                 "Outer Screen Repair - $299",
                 "Inner Screen Repair - $799",
                 "Back Glass - $89",
@@ -538,7 +538,7 @@
                 "Ear Speaker - $189",
                 "Loud Speaker - $189"
             ],
-            "Galaxy Z Fold 4": [
+            "Z Fold 4": [
                 "Outer Screen Repair - $329",
                 "Inner Screen Repair - $849",
                 "Back Glass - $89",
@@ -550,7 +550,7 @@
                 "Ear Speaker - $189",
                 "Loud Speaker - $189"
             ],
-            "Galaxy Z Fold 5": [
+            "Z Fold 5": [
                 "Outer Screen Repair - $349",
                 "Inner Screen Repair - $999",
                 "Back Glass - $89",
@@ -563,8 +563,8 @@
                 "Loud Speaker - $189"
             ]
         },
-        "Samsung Flip": {
-          "Galaxy Z Flip 3": [
+        "Flip": {
+          "Z Flip 3": [
             "Outer Screen Repair - $199",
             "Inner Screen Repair - $529",
             "Back Glass - $89",
@@ -576,7 +576,7 @@
             "Ear Speaker - $119",
             "Loud Speaker - $139"
           ],
-          "Galaxy Z Flip 4": [
+          "Z Flip 4": [
             "Outer Screen Repair - $229",
             "Inner Screen Repair - $549",
             "Back Glass - $89",
@@ -588,7 +588,7 @@
             "Ear Speaker - $119",
             "Loud Speaker - $139"
           ],
-          "Galaxy Z Flip 5": [
+          "Z Flip 5": [
             "Outer Screen Repair - $249",
             "Inner Screen Repair - $569",
             "Back Glass - $89",

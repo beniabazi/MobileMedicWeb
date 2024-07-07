@@ -15,6 +15,8 @@
 
       <!--=============== CSS ===============-->
       <link rel="stylesheet" href="assets/css/booking.css">
+      <link rel="stylesheet" href="assets/css/styles.css">
+
       <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
       </script>
@@ -72,24 +74,24 @@
          <form class="booking-form" id="booking-form">
             <div><h1 class="quote__header title">Repair Booking Form</h1></div>
                <div class="form-group">
-                  <label for="device-type">Device Type:</label>
+                  <label for="device-type">Brand:</label>
                      <select name="device-type" id="device-type">
-                        <option value="">Select Device Type</option>
+                        <option value="">Select Brand</option>
                         <option value="Apple">Apple</option>
                         <option value="Samsung">Samsung</option>
                         <option value="Google">Google</option>
                      </select>
                   </div>
                   <div class="form-group">
-                     <label for="brand">Brand:</label>
+                     <label for="brand">Model:</label>
                         <select name="brand" id="brand" disabled>
-                           <option value="">Select Brand</option>
+                           <option value="">Select Model</option>
                         </select>
                   </div>
                   <div class="form-group">
-                     <label for="model">Model:</label>
+                     <label for="model">Series:</label>
                         <select name="model" id="model" disabled>
-                           <option value="">Select Model</option>
+                           <option value="">Select Series</option>
                         </select>
                   </div>
                   <div class="form-group">
@@ -110,7 +112,7 @@
                <br>
                   <textarea type="detail" name="details" id="details" rows="5" placeholder="Additional Details"></textarea>
                </div>
-            <button type="submit" onclick="sendMail()" class="button">Send</button>
+            <button type="submit" onclick="sendMail()" class="button">Send Booking Request</button>
          </form>    
 </main>
 
