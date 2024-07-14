@@ -164,7 +164,6 @@ img {
     transition: left .4s;
   }
 }
-
 .nav__list,
 .nav__social{
   display: flex;
@@ -354,7 +353,6 @@ box-shadow: inset;
 /* Swiper class */
 .swiper{
   margin-inline: initial;
-  overflow: visible;
 }
 
 :is(.swiper-slide-active, .swiper-slide-duplicate-active) .favorites__img{
@@ -420,12 +418,6 @@ box-shadow: inset;
 .banner__item span{
   font: var(--small-font-size) var(--second-font);
 }
-
-
-/*=============== PRODUCTS ===============*/
-
-
-
 
 /*=============== CONTACT ===============*/
 .contact__container{
@@ -702,9 +694,15 @@ form input, form textarea, form select, form option{
 }
 
 
-/* ============== Quote Page================ */
+/* ============== About us Page================ */
+.main__about{
+  margin-top: 5rem;
+}
 
-
+li i {
+  font-size: 20px; /* adjust as needed */
+  margin-right: 10px; /* adds space between icon and text */
+}
 
 
 
@@ -997,11 +995,11 @@ form{
   width: 395px;
 }
 .favorites__container{
-  grid-template-columns: 520px;
+  
   row-gap: 4rem;
 }
 .favorites__swiper{
-  max-width: 1000px;
+  
 }
 .favorites__article,
 .favorites__img{
